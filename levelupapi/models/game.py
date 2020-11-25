@@ -5,8 +5,8 @@ from django.db.models.deletion import CASCADE
 class Game(models.Model):
     title = models.CharField(max_length=75)
     maker = models.CharField(max_length=50)
-    skill_level = models.IntegerField()
+    skillLevel = models.IntegerField()
     gamer = models.ForeignKey("Gamer", on_delete=CASCADE)
-    gametype = models.ForeignKey(
+    gameTypeId = models.ForeignKey(
         "GameType", on_delete=CASCADE, related_name="games")
-    number_of_players = models.IntegerField()
+    numberOfPlayers = models.IntegerField()
