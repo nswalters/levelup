@@ -27,15 +27,15 @@ class Games(ViewSet):
         game = Game()
         game.title = request.data["title"]
         game.maker = request.data["maker"]
-        game.number_of_players = request.data["numberOfPlayers"]
-        game.skill_level = request.data["skillLevel"]
+        game.numberOfPlayers = request.data["numberOfPlayers"]
+        game.skillLevel = request.data["skillLevel"]
         game.gamer = gamer
 
         # Use the Django ORM to get the record from the database
         # whose `id` is what the client passed as the
         # `gameTypeId` in the body of the request.
         gametype = GameType.objects.get(pk=request.data["gameTypeId"])
-        game.gametype = gametype
+        game.gameTypeId = gametype
 
         # Try to save the new game to the database, then
         # serialize the game instance as JSON, and send the
@@ -83,8 +83,8 @@ class Games(ViewSet):
         game = Game.objects.get(pk=pk)
         game.title = request.data["title"]
         game.maker = request.data["maker"]
-        game.number_of_players = request.data["numberOfPlayers"]
-        game.skill_level = request.data["skillLevel"]
+        game.numberOfPlayers = request.data["numberOfPlayers"]
+        game.skillLevel = request.data["skillLevel"]
         game.gamer = gamer
 
         gametype = GameType.objects.get(pk=request.data["gameTypeId"])
@@ -148,5 +148,5 @@ class GameSerializer(serializers.HyperlinkedModelSerializer):
             lookup_field='id'
         )
         fields = ('id', 'url', 'title', 'maker',
-                  'number_of_players', 'skill_level', 'gametype')
+                  'numberOfPlayers', 'skillLevel', 'gameTypeId')
         depth = 1

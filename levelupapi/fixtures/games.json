@@ -5,10 +5,9 @@
     "fields": {
       "title": "Welcome To",
       "maker": "Benoit Turpin",
-      "gamer": 1,
-      "gametype": 1,
-      "number_of_players": 4,
-      "skill_level": 3
+      "gameTypeId": 1,
+      "numberOfPlayers": 4,
+      "skillLevel": 3
     }
   },
   {
@@ -17,10 +16,9 @@
     "fields": {
       "title": "Settlers of Catan",
       "maker": "Klaus Teuber",
-      "gamer": 1,
-      "gametype": 1,
-      "number_of_players": 4,
-      "skill_level": 4
+      "gameTypeId": 1,
+      "numberOfPlayers": 4,
+      "skillLevel": 4
     }
   },
   {
@@ -29,10 +27,9 @@
     "fields": {
       "title": "Dungeons & Dragons",
       "maker": "Wizards of the Coast",
-      "gamer": 1,
-      "gametype": 2,
-      "number_of_players": 5,
-      "skill_level": 3
+      "gameTypeId": 2,
+      "numberOfPlayers": 5,
+      "skillLevel": 3
     }
   }
 ]
